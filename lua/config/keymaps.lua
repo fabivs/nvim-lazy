@@ -12,8 +12,8 @@ keymap.set("n", "-", "<C-x>", opts)
 keymap.set("n", "<C-a>", "gg<S-v>G", opts)
 
 -- Tab navigation
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
+-- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+-- keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
