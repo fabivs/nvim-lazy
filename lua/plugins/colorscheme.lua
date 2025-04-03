@@ -1,6 +1,9 @@
 return {
-  "ellisonleao/gruvbox.nvim",
-  lazy = true,
-  priority = 1000,
-  config = true,
+  -- { "ellisonleao/gruvbox.nvim" },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "gruvbox",
+  --   },
+  -- },
 }
