@@ -11,23 +11,16 @@ keymap.set("n", "-", "<C-x>", opts)
 -- Select all in normal mode
 keymap.set("n", "<C-a>", "gg<S-v>G", opts)
 
+-- Clipboard
 -- paste and delete without updating the clipboard
--- vim.keymap.set("x", "<leader>p", [["_dP]])
--- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-
+vim.keymap.set("x", "<BS>p", [["_dP]])
+vim.keymap.set({ "n", "v" }, "<BS>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<BS>D", [["_D]])
 -- copy to system clipboard
--- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
--- vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]], { remap = true })
 
-vim.keymap.set("n", "yc", "yygccp", { desc = "Comment and duplicate line" })
-
--- Diagnostics
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
-keymap.set("n", "<C-k>", function()
-  vim.diagnostic.goto_prev()
-end, opts)
+vim.keymap.set("n", "yc", "yygccp", { remap = true, desc = "Comment and duplicate current line" })
 
 -- Neo-tree vinegar keybind
 -- keymap.set("n", "-", ":Neotree toggle current reveal_force_cwd<cr>", opts)
