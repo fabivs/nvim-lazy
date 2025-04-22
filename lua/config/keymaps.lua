@@ -11,19 +11,27 @@ keymap.set("n", "-", "<C-x>", opts)
 -- Select all in normal mode
 keymap.set("n", "<C-a>", "gg<S-v>G", opts)
 
--- Tab navigation
--- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
--- keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
+-- paste and delete without updating the clipboard
+-- vim.keymap.set("x", "<leader>p", [["_dP]])
+-- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+
+-- copy to system clipboard
+-- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+-- vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set("n", "yc", "yygccp", { desc = "Comment and duplicate line" })
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+keymap.set("n", "<C-k>", function()
+  vim.diagnostic.goto_prev()
+end, opts)
 
 -- Neo-tree vinegar keybind
-keymap.set("n", "-", ":Neotree toggle current reveal_force_cwd<cr>", opts)
+-- keymap.set("n", "-", ":Neotree toggle current reveal_force_cwd<cr>", opts)
 
--- Copy current file path to clipboard
 keymap.set("n", "<leader>fp", '<cmd>let @+ = expand("%")<CR>', { desc = "Copy relative Path" })
 keymap.set(
   "n",
