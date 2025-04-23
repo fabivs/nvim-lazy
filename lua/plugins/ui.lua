@@ -16,9 +16,9 @@ local function trunc(trunc_width, trunc_len, hide_width, no_ellipsis)
 end
 
 return {
+  -- got this incline config from devaslife, removed the color
   {
     "b0o/incline.nvim",
-    -- Optional: Lazy load Incline
     event = "VeryLazy",
     config = function()
       require("incline").setup({
@@ -42,6 +42,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
+      -- truncate branch length
       table.remove(opts.sections.lualine_b)
       table.insert(opts.sections.lualine_b, {
         "branch",
