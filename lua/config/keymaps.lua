@@ -24,6 +24,7 @@ vim.keymap.set("n", "yc", "yygccp", { remap = true, desc = "Comment and duplicat
 
 -- Neo-tree vinegar keybind
 -- keymap.set("n", "-", ":Neotree toggle current reveal_force_cwd<cr>", opts)
+keymap.set("n", "-", ":Explore<CR>", opts)
 
 keymap.set("n", "<leader>fp", '<cmd>let @+ = expand("%")<CR>', { desc = "Copy relative Path" })
 keymap.set(
