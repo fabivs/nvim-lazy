@@ -4,3 +4,5 @@
 
 -- do not use system clipboard
 vim.opt.clipboard = ""
+
+vim.g.netrw_banner = 0
