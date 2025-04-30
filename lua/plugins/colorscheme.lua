@@ -1,12 +1,12 @@
 return {
   -- add gruvbox
-  { "rose-pine/neovim" },
+  { "vague2k/vague.nvim" },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "vague",
     },
   },
 }

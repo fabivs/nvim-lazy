@@ -48,6 +48,20 @@ return {
         "branch",
         fmt = trunc(1000, 12, 80, false),
       })
+      opts.options = {
+        section_separators = { "|", "|" }, -- Vertical bar as separator
+        component_separators = { "|", "|" }, -- Vertical bar as separator
+      }
     end,
+  },
+  {
+    "folke/noice.nvim",
+    -- Classic commandline position instead of pop-up
+    opts = {
+      cmdline = {
+        view = "cmdline", -- moves command line to bottom
+      },
+      presets = { command_palette = false }, -- tab completions for commandline don't pop-up at top
+    },
   },
 }
