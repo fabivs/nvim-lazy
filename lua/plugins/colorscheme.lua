@@ -1,8 +1,8 @@
 return {
-  -- add gruvbox
+  -- add colorscheme
   { "vague2k/vague.nvim" },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load the colorscheme
   {
     "LazyVim/LazyVim",
     opts = {

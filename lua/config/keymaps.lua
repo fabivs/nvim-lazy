@@ -2,7 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
 
 -- Clipboard
 -- paste and delete without updating the clipboard
@@ -16,8 +15,7 @@ keymap.set("n", "<leader>Y", [["+Y]], { remap = true })
 keymap.set("n", "yc", "yygccp", { remap = true, desc = "Comment and duplicate current line" })
 
 -- Neo-tree vinegar keybind
--- keymap.set("n", "-", ":Neotree toggle current reveal_force_cwd<cr>", opts)
-keymap.set("n", "-", ":Explore<CR>", opts)
+keymap.set("n", "-", ":Explore<CR>")
 
 -- Copy relative path
 keymap.set("n", "<leader>fp", '<cmd>let @+ = expand("%")<CR>', { desc = "Copy relative Path" })
