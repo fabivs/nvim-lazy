@@ -11,6 +11,8 @@ keymap.set({ "n", "v" }, "<BS>D", [["_D]])
 -- copy to system clipboard
 keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 keymap.set("n", "<leader>Y", [["+Y]], { remap = true })
+-- paste from system clipboard
+keymap.set({ "n", "v" }, "<leader>p", [["+p]])
 
 keymap.set("n", "yc", "yygccp", { remap = true, desc = "Comment and duplicate current line" })
 
