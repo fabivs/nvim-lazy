@@ -5,7 +5,8 @@ local keymap = vim.keymap
 
 -- Clipboard
 -- paste and delete without updating the clipboard
-keymap.set("x", "<BS>p", [["_dP]])
+keymap.set("x", "<BS>p", [["_dp]])
+keymap.set("x", "<BS>P", [["_dP]])
 keymap.set({ "n", "v" }, "<BS>d", [["_d]])
 keymap.set({ "n", "v" }, "<BS>D", [["_D]])
 -- copy to system clipboard
