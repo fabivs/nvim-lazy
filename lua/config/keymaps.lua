@@ -28,3 +28,7 @@ keymap.set(
   "<cmd>let @+ = join([expand('%'),  line(\".\")], ':')<CR>",
   { desc = "Copy relative Path and current line" }
 )
+
+-- Horizontal scroll
+keymap.set({ "n", "v" }, "<A-h>", "2zh")
+keymap.set({ "n", "v" }, "<A-l>", "2zl")
