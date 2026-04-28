@@ -21,11 +21,11 @@ keymap.set("n", "yc", "yygccp", { remap = true, desc = "Comment and duplicate cu
 keymap.set("n", "-", ":Explore<CR>")
 
 -- Copy relative path
-keymap.set("n", "<leader>fp", '<cmd>let @+ = expand("%")<CR>', { desc = "Copy relative Path" })
+keymap.set("n", "<leader>fp", '<cmd>let @+ = expand("%:.")<CR>', { desc = "Copy relative Path" })
 keymap.set(
   "n",
   "<leader>fP",
-  "<cmd>let @+ = join([expand('%'),  line(\".\")], ':')<CR>",
+  "<cmd>let @+ = join([expand('%:.'),  line(\".\")], ':')<CR>",
   { desc = "Copy relative Path and current line" }
 )
 
