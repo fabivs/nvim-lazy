@@ -38,20 +38,26 @@ return {
       })
     end,
   },
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   event = "VeryLazy",
+  --   opts = function(_, opts)
+  --     -- truncate branch length
+  --     table.remove(opts.sections.lualine_b)
+  --     table.insert(opts.sections.lualine_b, {
+  --       "branch",
+  --       fmt = trunc(1000, 12, 80, false),
+  --     })
+  --     opts.options = {
+  --       section_separators = { "|", "|" }, -- Vertical bar as separator
+  --       component_separators = { "|", "|" }, -- Vertical bar as separator
+  --     }
+  --   end,
+  -- },
   {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    opts = function(_, opts)
-      -- truncate branch length
-      table.remove(opts.sections.lualine_b)
-      table.insert(opts.sections.lualine_b, {
-        "branch",
-        fmt = trunc(1000, 12, 80, false),
-      })
-      opts.options = {
-        section_separators = { "|", "|" }, -- Vertical bar as separator
-        component_separators = { "|", "|" }, -- Vertical bar as separator
-      }
-    end,
+    "m4xshen/hardtime.nvim",
+    lazy = false,
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {},
   },
 }
